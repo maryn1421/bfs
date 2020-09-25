@@ -3,7 +3,12 @@ package com.codecool.bfsexample.model;
 import java.util.HashSet;
 import java.util.Set;
 
+
+
 public class UserNode {
+    public UserNode() {
+
+    }
 
     // feel free to add new properties or methods here
 
