@@ -12,14 +12,14 @@ import java.util.Set;
 
 public class GraphPlotter {
 
-    private Graph graph;
+    private Graph graph; // the class needs a graph
 
     GraphPlotter(List<UserNode> points) {
-        graph = new SingleGraph("Friend circle");
+        graph = new SingleGraph("Friend circle"); //setting up the graph
         // add all nodes to the graph.
-        for (UserNode userNode : points) {
-            Node newNode = graph.addNode(Long.toString(userNode.getId()));
-            newNode.addAttribute("ui.label", userNode.getFirstName() + " " + userNode.getLastName() + " (" + userNode.getId() + ")");
+        for (UserNode userNode : points) { //iterating through the points
+            Node newNode = graph.addNode(Long.toString(userNode.getId()));//packing out the a "nodelist", adding each element to the graph
+            newNode.addAttribute("ui.label", userNode.getFirstName() + " " + userNode.getLastName() + " (" + userNode.getId() + ")");//adding attributes
         }
 
         for (UserNode userNode : points) {
